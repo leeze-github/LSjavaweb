@@ -8,6 +8,9 @@ public class MessageEntity {
     private String context;
     private Date date;
 
+    public MessageEntity() {
+    }
+
     public MessageEntity(int id, String userid, String context, Date date) {
         this.id = id;
         this.userid = userid;
