@@ -1,6 +1,7 @@
-package com.example.lsjavaweb;
+package com.ls.lsjavaweb.Servlet;
 
 import java.io.*;
+
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
