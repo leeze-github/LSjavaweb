@@ -1,13 +1,15 @@
-package com.ls.lsjavaweb;
+package com.ls.lsjavaweb.Servlet;
 
 import com.ls.lsjavaweb.entity.MessageEntity;
 import com.ls.lsjavaweb.utils.JdbcUtils;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 
-public class UserMessage {
-
+public class IndexServlet {
     public ArrayList<MessageEntity> getUserMessageList() throws Exception {
         ArrayList<MessageEntity> a = new ArrayList<>();
         //查询
@@ -40,17 +42,4 @@ public class UserMessage {
         conn.close();
         return a;
     }
-    public void insertUserMessage() throws Exception {
-        //插入
-        Connection conn = JdbcUtils.getconnection();
-        String SQL = " insert into u_message (id,name,context,create_time) values(?,?,?,?)";
-        PreparedStatement pst = conn.prepareStatement(SQL);
-        pst.setInt(1, 0);
-        pst.setString(2, "游客");
-        pst.setString(3, "这是一条留言");
-        pst.setDate(4, new Date(System.currentTimeMillis()));
-        pst.executeUpdate();
-        pst.close();
-    }
-
 }

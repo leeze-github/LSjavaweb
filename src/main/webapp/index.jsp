@@ -1,6 +1,6 @@
 <%@ page import="com.ls.lsjavaweb.entity.MessageEntity" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.ls.lsjavaweb.UserMessage" %>
+<%@ page import="com.ls.lsjavaweb.Servlet.IndexServlet" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -16,7 +16,7 @@
 <%
     ArrayList<MessageEntity> logins;
     try {
-        logins = new UserMessage().getUserMessageList();
+        logins = new IndexServlet().getUserMessageList();
     } catch (Exception e) {
         throw new RuntimeException(e);
     }
@@ -42,11 +42,8 @@
                 <div style="display: flex;">
                     <img src="img/icon_user.png" class="item_user_icon" alt="error"/>
                     <div style="flex: 1;">
-                        <p class="item_user_name"><%=login.getUserid()%>
-                        </p>
-                        <p class="item_user_context">
-                            <%=login.getContext() + "  " + login.getDate()%>
-                        </p>
+                        <p class="item_user_name"><%=login.getUserid()%></p>
+                        <p class="item_user_context"><%=login.getContext() + "  " + login.getDate()%></p>
                     </div>
                 </div>
             </li>
