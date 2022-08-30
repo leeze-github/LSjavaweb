@@ -153,3 +153,73 @@ td {
 	color: #2f80ed;
 	line-height: 14px;
 }
+
+/*.body_input {*/
+/*	display: flex;*/
+/*	justify-content: center;*/
+/*	align-items: center;*/
+/*	flex-wrap: wrap;*/
+/*}*/
+
+/*.input_message {*/
+/*	max-width: 1030px;*/
+/*	width: 1200px;*/
+/*	height: 101px;*/
+/*	background: #ffffff;*/
+/*	border-radius: 20px;*/
+/*	box-shadow: 0 4px 32px 0 rgba(47, 128, 237, 0.10);*/
+/*}*/
+
+/*!*修改提示文字的颜色*!*/
+/*input::-webkit-input-placeholder {*/
+/*	!* WebKit browsers *!*/
+/*	padding-left: 38px;*/
+/*	width: auto;*/
+/*	height: 36px;*/
+/*	font-size: 26px;*/
+/*	font-family: PingFang SC, PingFang SC-Regular, serif;*/
+/*	font-weight: 400;*/
+/*	text-align: LEFT;*/
+/*	color: rgba(0, 0, 0, 0.24);*/
+/*	line-height: 26px;*/
+
+/*}*/
+
+/*input:-moz-placeholder {*/
+/*	!* Mozilla Firefox 4 to 18 *!*/
+/*	padding-left: 38px;*/
+/*	width: auto;*/
+/*	height: 36px;*/
+/*	font-size: 26px;*/
+/*	font-family: PingFang SC, PingFang SC-Regular, serif;*/
+/*	font-weight: 400;*/
+/*	text-align: LEFT;*/
+/*	color: rgba(0, 0, 0, 0.24);*/
+/*	line-height: 26px;*/
+/*}*/
+
+/*input::-moz-placeholder {*/
+/*	!* Mozilla Firefox 19+ *!*/
+/*	padding-left: 38px;*/
+/*	width: auto;*/
+/*	height: 36px;*/
+/*	font-size: 26px;*/
+/*	font-family: PingFang SC, PingFang SC-Regular, serif;*/
+/*	font-weight: 400;*/
+/*	text-align: LEFT;*/
+/*	color: rgba(0, 0, 0, 0.24);*/
+/*	line-height: 26px;*/
+/*}*/
+
+/*input:-ms-input-placeholder {*/
+/*	!* Internet Explorer 10+ *!*/
+/*	padding-left: 38px;*/
+/*	width: auto;*/
+/*	height: 36px;*/
+/*	font-size: 26px;*/
+/*	font-family: PingFang SC, PingFang SC-Regular, serif;*/
+/*	font-weight: 400;*/
+/*	text-align: LEFT;*/
+/*	color: rgba(0, 0, 0, 0.24);*/
+/*	line-height: 26px;*/
+/*}*/

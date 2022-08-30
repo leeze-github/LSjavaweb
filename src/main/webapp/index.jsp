@@ -11,12 +11,75 @@
 </head>
 <style>
 
-</style>
-<script language="JavaScript">
-    function winclose() {
-        window.opener.location.reload();//刷新
+    .input_message {
+        max-width: 1030px;
+        width: 1200px;
+        height: 101px;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 4px 32px 0 rgba(47, 128, 237, 0.10);
     }
-</script>
+    .body_input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    /*修改提示文字的颜色*/
+    input::-webkit-input-placeholder {
+        /* WebKit browsers */
+        padding-left: 38px;
+        width: auto;
+        height: 36px;
+        font-size: 26px;
+        font-family: PingFang SC, PingFang SC-Regular, serif;
+        font-weight: 400;
+        text-align: LEFT;
+        color: rgba(0, 0, 0, 0.24);
+        line-height: 26px;
+
+    }
+
+    input:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        padding-left: 38px;
+        width: auto;
+        height: 36px;
+        font-size: 26px;
+        font-family: PingFang SC, PingFang SC-Regular, serif;
+        font-weight: 400;
+        text-align: LEFT;
+        color: rgba(0, 0, 0, 0.24);
+        line-height: 26px;
+    }
+
+    input::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        padding-left: 38px;
+        width: auto;
+        height: 36px;
+        font-size: 26px;
+        font-family: PingFang SC, PingFang SC-Regular, serif;
+        font-weight: 400;
+        text-align: LEFT;
+        color: rgba(0, 0, 0, 0.24);
+        line-height: 26px;
+    }
+
+    input:-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        padding-left: 38px;
+        width: auto;
+        height: 36px;
+        font-size: 26px;
+        font-family: PingFang SC, PingFang SC-Regular, serif;
+        font-weight: 400;
+        text-align: LEFT;
+        color: rgba(0, 0, 0, 0.24);
+        line-height: 26px;
+    }
+
+</style>
 <body>
 <%
     ArrayList<MessageEntity> logins;
@@ -38,10 +101,12 @@
     </div>
 
     <div>
-        <img src="./img/test.jpg" class="banner"/>
+        <img src="./img/test.jpg" class="banner" alt="error"/>
         <div class="body_input">
-            <form action="Index-servlet" method="post">
-                <input name="message" type="text" placeholder="这里输入新的留言" onclick="winclose()"/>
+            <form  action="Index-servlet" method="post">
+                <label>
+                    <input class="input_message"  name="message" type="text" placeholder="这里输入新的留言"/>
+                </label>
             </form>
         </div>
     </div>
@@ -66,7 +131,10 @@
 
     <div>
         <ul class="body_page_num">
-            <li>1</li>
+            <% for (int i = 0; i < logins.size() % 10; i++) {%>
+            <% int index = i + 1; %>
+            <li>&nbsp;&nbsp;<%= index%>&nbsp;&nbsp;</li>
+            <% } %>
         </ul>
     </div>
 
