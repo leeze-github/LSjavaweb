@@ -2,14 +2,20 @@ package com.ls.lsjavaweb.Servlet;
 
 import com.ls.lsjavaweb.entity.MessageEntity;
 import com.ls.lsjavaweb.utils.JdbcUtils;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class IndexServlet {
+public class IndexServlet extends HttpServlet {
+
     public ArrayList<MessageEntity> getUserMessageList() throws Exception {
         ArrayList<MessageEntity> a = new ArrayList<>();
         //查询
@@ -41,5 +47,10 @@ public class IndexServlet {
         stmt.close();
         conn.close();
         return a;
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
     }
 }

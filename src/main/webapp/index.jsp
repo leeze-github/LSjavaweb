@@ -12,6 +12,11 @@
 <style>
 
 </style>
+<script language="JavaScript">
+    function winclose() {
+        window.opener.location.reload();//刷新
+    }
+</script>
 <body>
 <%
     ArrayList<MessageEntity> logins;
@@ -32,7 +37,12 @@
     </div>
 
     <div>
-        <img src="img/test.jpg" class="banner" alt="error"/>
+        <img src="./img/test.jpg" class="banner" />
+        <div class="body_input">
+            <form>
+                <input class="input_message" type="text" placeholder="这里输入新的留言" onclick="winclose()"/>
+            </form>
+        </div>
     </div>
 
     <div class="body_context">
