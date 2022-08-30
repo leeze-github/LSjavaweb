@@ -3,17 +3,16 @@ package com.ls.lsjavaweb.Servlet;
 import com.ls.lsjavaweb.entity.MessageEntity;
 import com.ls.lsjavaweb.utils.JdbcUtils;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.io.PrintWriter;
+import java.sql.*;
 import java.util.ArrayList;
-
+@WebServlet(name = "IndexServlet", value = "/Index-servlet")
 public class IndexServlet extends HttpServlet {
 
     public ArrayList<MessageEntity> getUserMessageList() throws Exception {
@@ -48,9 +47,46 @@ public class IndexServlet extends HttpServlet {
         conn.close();
         return a;
     }
+    public void insertUserMessage(String message) throws Exception {
+//        插入
+        Connection conn = JdbcUtils.getconnection();
+        String SQL = " insert into u_message (id,name,context,create_time) values(?,?,?,?)";
+        PreparedStatement pst = conn.prepareStatement(SQL);
+        pst.setInt(1, 0);
+        pst.setString(2, "游客");
+        pst.setString(3, message);
+        pst.setDate(4, new Date(System.currentTimeMillis()));
+        pst.executeUpdate();
+        pst.close();
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html");
+
+        String message = req.getParameter("message");
+        if (message.isEmpty()){
+            PrintWriter out = resp.getWriter();
+            out.println("<html><body>");
+            out.println("<a href=\"index.jsp\" >内容为空 点击返回</a>");
+            out.println("</body></html>");
+            return;
+        }
+        try {
+            insertUserMessage(message);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        PrintWriter out = resp.getWriter();
+        out.println("<html><body>");
+        out.println("<a href=\"index.jsp\" >提交成功 点击返回</a>");
+        out.println("</body></html>");
+    }
+
+
 }

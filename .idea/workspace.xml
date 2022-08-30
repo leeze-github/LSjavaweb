@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="944b7d14-5af5-4669-aadd-5dd9e20a8e8f" name="Changes" comment="c">
+    <list default="true" id="944b7d14-5af5-4669-aadd-5dd9e20a8e8f" name="Changes" comment="输入框ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ls/lsjavaweb/Servlet/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ls/lsjavaweb/Servlet/IndexServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +39,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2E0rfGiHkzNLkm2cFp0bpg1frOd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -192,7 +194,7 @@
       <option name="presentableId" value="Default" />
       <updated>1661743445783</updated>
       <workItem from="1661743446923" duration="11787000" />
-      <workItem from="1661764187139" duration="3889000" />
+      <workItem from="1661764187139" duration="6711000" />
     </task>
     <task id="LOCAL-00001" summary="jdbc连接  插入  查询">
       <created>1661758708299</created>
@@ -215,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661767143998</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="输入框ui">
+      <created>1661826779411</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661826779411</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +245,8 @@
     <MESSAGE value="jdbc连接  插入  查询" />
     <MESSAGE value="适配到留言" />
     <MESSAGE value="c" />
-    <option name="LAST_COMMIT_MESSAGE" value="c" />
+    <MESSAGE value="输入框ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="输入框ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

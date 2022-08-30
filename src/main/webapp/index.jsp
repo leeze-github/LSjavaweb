@@ -21,7 +21,8 @@
 <%
     ArrayList<MessageEntity> logins;
     try {
-        logins = new IndexServlet().getUserMessageList();
+        IndexServlet indexServlet = new IndexServlet();
+        logins = indexServlet.getUserMessageList();
     } catch (Exception e) {
         throw new RuntimeException(e);
     }
@@ -37,10 +38,10 @@
     </div>
 
     <div>
-        <img src="./img/test.jpg" class="banner" />
+        <img src="./img/test.jpg" class="banner"/>
         <div class="body_input">
-            <form>
-                <input class="input_message" type="text" placeholder="这里输入新的留言" onclick="winclose()"/>
+            <form action="Index-servlet" method="post">
+                <input name="message" type="text" placeholder="这里输入新的留言" onclick="winclose()"/>
             </form>
         </div>
     </div>
@@ -52,8 +53,10 @@
                 <div style="display: flex;">
                     <img src="img/icon_user.png" class="item_user_icon" alt="error"/>
                     <div style="flex: 1;">
-                        <p class="item_user_name"><%=login.getUserid()%></p>
-                        <p class="item_user_context"><%=login.getContext() + "  " + login.getDate()%></p>
+                        <p class="item_user_name"><%=login.getUserid()%>
+                        </p>
+                        <p class="item_user_context"><%=login.getContext() + "  " + login.getDate()%>
+                        </p>
                     </div>
                 </div>
             </li>
