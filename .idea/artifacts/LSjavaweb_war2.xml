@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="LSjavaweb:war2">
+    <output-path>$PROJECT_DIR$/out/artifacts/LSjavaweb_war2</output-path>
+    <root id="archive" name="LSjavaweb_war.war">
+      <element id="artifact" artifact-name="LSjavaweb:war exploded" />
+      <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.11.4" />
+      <element id="library" level="project" name="Maven: jakarta.servlet:jakarta.servlet-api:5.0.0" />
+      <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.28" />
+      <element id="library" level="project" name="Maven: org.apiguardian:apiguardian-api:1.1.2" />
+      <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-api:5.8.2" />
+      <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.8.2" />
+      <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-commons:1.8.2" />
+      <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-engine:1.8.2" />
+      <element id="library" level="project" name="Maven: org.opentest4j:opentest4j:1.2.0" />
+    </root>
+  </artifact>
+</component>

@@ -17,14 +17,18 @@
         height: 101px;
         background: #ffffff;
         border-radius: 20px;
+        border: 0 none;
+        outline: none;
         box-shadow: 0 4px 32px 0 rgba(47, 128, 237, 0.10);
     }
+
     .body_input {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
     }
+
     /*修改提示文字的颜色*/
     input::-webkit-input-placeholder {
         /* WebKit browsers */
@@ -99,14 +103,14 @@
         <a class="head_item">体系</a>
         <a class="head_item">项目</a>
     </div>
+    <div >
 
+    </div>
     <div>
         <img src="./img/test.jpg" class="banner" alt="error"/>
         <div class="body_input">
-            <form  action="Index-servlet" method="post">
-                <label>
-                    <input class="input_message"  name="message" type="text" placeholder="这里输入新的留言"/>
-                </label>
+            <form action="Index-servlet" method="post">
+                <input class="input_message" name="message" type="text" placeholder="这里输入新的留言"/>
             </form>
         </div>
     </div>

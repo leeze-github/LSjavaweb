@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="LSjavaweb-1.0-SNAPSHOT.war">
+    <root id="archive" name="demo3-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="LSjavaweb:war exploded" />
     </root>
   </artifact>

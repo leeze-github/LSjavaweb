@@ -16,6 +16,7 @@ public class JdbcUtils {
     //static静态，直接使用类名.方法名更方便
     public static Connection getconnection() throws Exception{
         String url="jdbc:mysql://localhost:3306/user_message?userUnicode=true&characterEncoding=utf8";
+//        String user="user_message";
         String user="root";
         String password="root";
         return DriverManager.getConnection(url,user,password);
