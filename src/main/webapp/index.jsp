@@ -20,6 +20,7 @@
         border: 0 none;
         outline: none;
         box-shadow: 0 4px 32px 0 rgba(47, 128, 237, 0.10);
+        padding-left: 38px;
     }
 
     .body_input {

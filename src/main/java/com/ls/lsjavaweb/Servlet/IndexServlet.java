@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 import java.sql.*;
 import java.util.ArrayList;
 @WebServlet(name = "IndexServlet", value = "/Index-servlet")
@@ -49,13 +50,14 @@ public class IndexServlet extends HttpServlet {
         return a;
     }
     public void insertUserMessage(String message) throws Exception {
+        String a = new String(message.getBytes("iso8859-1"), StandardCharsets.UTF_8);
 //        插入
         Connection conn = JdbcUtils.getconnection();
         String SQL = " insert into user_message (id,name,context,create_time) values(?,?,?,?)";
         PreparedStatement pst = conn.prepareStatement(SQL);
         pst.setInt(1, 0);
         pst.setString(2, "游客");
-        pst.setString(3, message);
+        pst.setString(3, a);
         pst.setDate(4, new Date(System.currentTimeMillis()));
         pst.executeUpdate();
         pst.close();
@@ -69,7 +71,7 @@ public class IndexServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-
+        resp.setCharacterEncoding("utf-8");
         String message = req.getParameter("message");
         if (message.isEmpty()){
             PrintWriter out = resp.getWriter();

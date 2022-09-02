@@ -15,7 +15,8 @@ public class JdbcUtils {
     //获取连接(自己决定，封装到方法中)
     //static静态，直接使用类名.方法名更方便
     public static Connection getconnection() throws Exception{
-        String url="jdbc:mysql://localhost:3306/user_message?userUnicode=true&characterEncoding=utf8";
+        String url="jdbc:mysql://localhost:3306/user_message?useUnicode=true&characterEncoding=UTF-8";
+        //上线需要改账号名称
 //        String user="user_message";
         String user="root";
         String password="root";
